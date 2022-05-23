@@ -17,11 +17,7 @@ module.exports = (data, socket, connection) => {
                     reject(error);
                 }
                         // console.log(results);
-                let foo = false;
-                if(Array.isArray(results)){
-                    foo = results;
-                }
-                resolve(JSON.parse(JSON.stringify(foo)));
+                resolve(JSON.parse(JSON.stringify(results)));
             });
         });
     }
