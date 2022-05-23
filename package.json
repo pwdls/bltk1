@@ -1,0 +1,27 @@
+{
+  "name": "pwd",
+  "version": "1.0.0",
+  "description": "BLTK project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "server": "nodemon app.js"
+  },
+  "keywords": [
+    "bltk",
+    "react"
+  ],
+  "author": "Igor Gribov <work.gribov@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "config": "^3.3.7",
+    "express": "^4.18.1",
+    "express-validator": "^6.14.0",
+    "mysql": "^2.18.1",
+    "socket.io": "^4.5.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.1.0",
+    "nodemon": "^2.0.16"
+  }
+}
