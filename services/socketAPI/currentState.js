@@ -54,7 +54,9 @@ module.exports = (socket, connection) => {
                                 lv.train    train,
                                 lv.owner    owner,
                                 lo.name      ownerName,
-                                lo.fullName  ownerFullName
+                                lo.fullName  ownerFullName,
+                                lo.abbreviation
+                                    abb
                          FROM list_van lv
                                   LEFT JOIN list_model_van lmv ON lv.model = lmv.GUID
                                   LEFT JOIN list_owner lo on lv.owner = lo.GUID
@@ -163,7 +165,7 @@ module.exports = (socket, connection) => {
         .then(result => currentState.owners = result)
         .then(() => getTrains())
         .then(result => currentState.trains = result)
-      //  .then(() => console.log(JSON.stringify(currentState)))
+       // .then(() => console.log(JSON.stringify(currentState)))
         .then(() => socket.emit("currentState", JSON.stringify(currentState)))
         .catch(error => console.log(error))
 }
